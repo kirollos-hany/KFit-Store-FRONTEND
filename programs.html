@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>KFitStore</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icons/icons8-online-store-96.png" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/global.css" />
+  </head>
+  <body>
+   <!--header start-->
+   <header class="sticky-top">
+    <!--navbar start-->
+    <nav
+      class="navbar navbar-dark bg-dark navbar-expand-lg align-items-center"
+      id="mainNavbar"
+    >
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          class="text-decoration-none text-dark"
+        >
+          <h3 class="fw-bold">
+            KFit
+            <small class="font-italic font-weight-light fst-italic fw-lighter"
+              >Store</small
+            >
+          </h3>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-capitalize"
+                aria-current="page"
+                href="index.html"
+                >home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-capitalize"
+                aria-current="page"
+                href="supplements.html"
+                >supplements</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-capitalize" href="programs.html"
+                >programs</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-capitalize" href="transformations.html"
+                >transformations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-capitalize" href="contact.html"
+                >contact</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search programs, supplements"
+              aria-label="Search"
+            />
+            <button class="btn btn-light" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <div class="d-flex flex-row align-items-center mx-auto mt-1">
+            <div class="clickable me-2">
+              <i class="fa-solid fa-heart text-light fs-2"></i>
+            </div>
+            <a class="d-flex flex-column justify-content-start text-decoration-none">
+              <h6 class="text-light fs-6 clickable">Favorites</h6>
+              <small class="text-muted">10</small>
+            </a>
+          </div>
+          <a class="d-flex flex-row align-items-center mx-auto mt-1 text-decoration-none">
+            <div class="clickable me-2">
+              <i class="fas fa-shopping-cart text-light fs-2"></i>
+            </div>
+            <div class="d-flex flex-column justify-content-start">
+              <h6 class="text-light fs-6 clickable">Cart</h6>
+              <small class="text-muted">$10.0</small>
+            </div>
+          </a>
+          <a
+            class="d-flex flex-row align-items-center clickable mx-auto mt-1 text-decoration-none"
+          >
+            <div class="clickable me-2">
+              <i class="fa fa-user text-light fs-2"></i>
+            </div>
+            <div class="d-flex flex-column justify-content-start">
+              <h6 class="text-light fs-6 text-capitalize">my account</h6>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!--navbar end-->
+  </header>
+  <!--header end-->
+    <!--programs section start-->
+    <main>
+      <div class="container mt-5">
+        <div class="row align-items-start">
+          <h1 class="text-uppercase fw-bold text-md-start text-center">
+            programs
+          </h1>
+        </div>
+        <div class="align-items-start mt-1 mx-auto" role="tabpanel">
+          <div class="list-group list-group-horizontal-md" role="tablist">
+            <a
+              class="text-capitalize list-group-item list-group-item-action text-center active flex-fill"
+              data-bs-toggle="list"
+              role="tab"
+              href="#"
+              >all</a
+            >
+            <a
+              class="text-capitalize list-group-item list-group-item-action text-center flex-fill"
+              data-bs-toggle="list"
+              role="tab"
+              href="#"
+              >gym</a
+            >
+            <a
+              class="text-capitalize list-group-item list-group-item-action text-center flex-fill"
+              data-bs-toggle="list"
+              role="tab"
+              href="#"
+              >home</a
+            >
+            <a
+              class="text-capitalize list-group-item list-group-item-action text-center flex-fill"
+              data-bs-toggle="list"
+              role="tab"
+              href="#"
+              >build muscle</a
+            >
+            <a
+              class="text-capitalize list-group-item list-group-item-action text-center flex-fill"
+              data-bs-toggle="list"
+              role="tab"
+              href="#"
+              >lose fat</a
+            >
+          </div>
+        </div>
+        <div class="d-flex flex-column mt-4 me-1">
+          <div
+            class="d-flex flex-row justify-content-start"
+            data-toggle-target="sortDropdownList"
+          >
+            <i class="fas fa-sort fa-xs align-self-center mb-2 clickable"></i>
+            <h6 class="text-capitalize fs-6 fw-0 ms-1 clickable">Sort By</h6>
+          </div>
+          <div
+            class="list-group-flush clickable d-none"
+            id="sortDropdownList"
+            data-list-active="active"
+          >
+            <a class="list-group-item list-group-item-action active">Newest</a>
+            <a class="list-group-item list-group-item-action"
+              >Price: Low to High</a
+            >
+            <a class="list-group-item list-group-item-action"
+              >Price: High to Low</a
+            >
+            <a class="list-group-item list-group-item-action"
+              >Rating: Low to High</a
+            >
+            <a class="list-group-item list-group-item-action"
+              >Rating: High to Low</a
+            >
+          </div>
+        </div>
+      </div>
+      <!--cards container start-->
+      <div class="container">
+        <!--first row start-->
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-4 mb-2">
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="supplement image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+        </div>
+        <!--first row end-->
+        <!--second row start-->
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-4 mb-2">
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="supplement image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+        </div>
+        <!--second row end-->
+        <!--third row start-->
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 mt-4 mb-2">
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+          <!--program card start-->
+          <div class="col-md-4 col-lg-3 col-sm-6">
+            <div class="p-3 card">
+              <a href="#"
+                ><img
+                  src="./assets/images/prog1.jpeg"
+                  class="card-img-top"
+                  alt="program image"
+              /></a>
+              <div class="card-body border-top">
+                <a
+                  href="#"
+                  class="text-decoration-none fs-6 text-dark text-capitalize"
+                  >Pump addict</a
+                >
+                <p class="text-muted text-capitalize">pre workout</p>
+                <p class="text-muted">$10.0</p>
+              </div>
+            </div>
+          </div>
+          <!--program card end-->
+        </div>
+        <!--third row end-->
+      </div>
+      <!--cards container start-->
+    </main>
+    <!--supplements section end-->
+    <!--page navigation start-->
+    <nav aria-label="Page navigation" class="mt-3 mb-3">
+      <ul class="pagination justify-content-center" id="pagesItemsList">
+        <li class="page-item" id="previousPage">
+          <a class="page-link clickable text-dark">&lt</a>
+        </li>
+        <li class="page-item" id="nextPage">
+          <a class="page-link clickable text-dark">&gt</a>
+        </li>
+        <li class="page-item" style="display: none" id="currentPage">
+          [currentPage]
+        </li>
+        <li class="page-item" style="display: none" id="displayCount">
+          [displayCount]
+        </li>
+        <li class="page-item" style="display: none" id="maxPageCount">
+          [maxPageCount]
+        </li>
+      </ul>
+    </nav>
+    <!--page navigatio end-->
+    <footer class="bg-dark text-center text-white mt-5">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <!-- Twitter -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Google -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+
+          <!-- Github -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2022 Copyright:
+        <a class="text-white text-decoration-none" href="#">KFit Store</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/custom-display-toggle.js"></script>
+    <script src="./assets/js/custom-active-toggle.js"></script>
+    <!--page specific scripts-->
+    <script src="./assets/js/pagination.js"></script>
+  </body>
+</html>
